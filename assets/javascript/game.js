@@ -1,3 +1,4 @@
+// waits for the doms to be created in order to reference them
 $(document).ready(function() {
     // declaring variables
     var target = 0;
@@ -12,12 +13,14 @@ $(document).ready(function() {
     // call the number generator at the start of the document for 
     // the target and 4 gem values
     function gemGenerator (){
+        //  value is supposed to be between 1 and 12
         var gGen = Math.floor((Math.random()*12)+1);
         return gGen;
     }
 
     // function to randomly generate the target value
     function targetGenerator () {
+        // value is supposed to be between 12 and 120
         var tGen = Math.floor((Math.random()*120)+12);
         return tGen;
     }
@@ -53,13 +56,16 @@ $(document).ready(function() {
         checkScore();
     });
 
-    // if the current is > target the player loses
+    // function to check the score. 
     function checkScore() {
+        // if the current is larger than the target the # lost is incremented
+        // the reset function is called and the # of lost games is updated
         if (current > target){
             lost ++;
             reset();
             $('#lost').text(lost);
-        }else if (current === target){ // if the current is equal to the target the player wins.
+        }else if (current === target){ 
+            // if the current is equal to the target the player wins.
             // wins increments and the values are reset.
             wins ++;
             reset();
@@ -67,6 +73,7 @@ $(document).ready(function() {
         }
     }
 
+    // reset function - resets the gem, the current, and the target values
     function reset() {
         current = 0;
         g1val = gemGenerator();
@@ -77,9 +84,5 @@ $(document).ready(function() {
         $('#target').html(target);
         $('#score').text(current);
     }
-    // if statement for if current = or greater than target player loses
-    // if current = target, the player wins 
-    // reset function - random generates the gems and target values
-    //      1) the current gets reset to 0;
 
 });

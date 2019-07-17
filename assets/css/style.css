@@ -12,9 +12,33 @@ p {
 }
 
 #win {
-    color: green;
+    color: blue;
+    font-weight: bold;
 }
 
 #lost {
     color: red;
+    font-weight: bold;
 }
+
+.btn {
+    margin: 10px;
+    height: 250px;
+    width: 250px;
+}
+#gem1 {
+    background-image: src("blue.jpg");   
+}
+
+#gem2 {
+    background-image: url("./assets/images/blue.jpg");
+}
+
+#gem3 {
+    background-image: url("./assets/images/blue.jpg");
+}
+
+#gem4 {
+    background-image: url("./assets/images/blue.jpg");
+}
+
