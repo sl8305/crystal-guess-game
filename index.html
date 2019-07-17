@@ -14,27 +14,52 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Gem Game</title>
 </head>
+
+<!-- jQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!--  link for javascript -->
 <script src="assets/javascript/game.js"></script>
+
+
 <body>
     
     <h1> Cystal Numbers Game </h1>
 
-    <div id = "target" class = "container">
-        <p>Target Score: 0</p>
+    <div class="row">
+        <div id = "target-box" class = "container col-4">
+            <p>Target Score: 
+                <span id = "target"></span>
+            </p>
+        </div>
+
+        <div id = "win-box" class = "container col-4" >
+            <p>Number of wins: 
+                <span id = "win"></span>
+            </p>
+        </div>
+    </div>  
+
+    <div class="row">    
+        <div id = "score-box" class = "container col-4" >
+            <p>Current Score: 
+                <span id = "score"></span>
+            </p>
+        </div>
+        
+        <div id = "lose-box" class = "container col-4">
+                <p>Number of losses: 
+                    <span id = "lost"></span>
+                </p>
+            </div>
+        </div> 
+
+    <div class="row">
+        <div id = "gems" class = "container">
+            <button type="button" id = "gem1" class="btn btn-outline-primary">First</button>
+            <button type="button" id = "gem2" class="btn btn-outline-secondary">Second</button>
+            <button type="button" id = "gem3" class="btn btn-outline-success">Third</button>
+            <button type="button" id = "gem4" class="btn btn-outline-danger">Fourth</button>
+        </div>
     </div>
-
-    <div id = "score" class = "container">
-        <h2></h2>
-
-    </div>
-
-    <div id = "gems" class="container">
-        <button type="button" id = "gem1" class="btn btn-outline-primary">First</button>
-        <button type="button" id = "gem2" class="btn btn-outline-secondary">Second</button>
-        <button type="button" id = "gem3" class="btn btn-outline-success">Third</button>
-        <button type="button" id = "gem4" class="btn btn-outline-danger">Fourth</button>
-    </div>
-
 </body>
 </html>
