@@ -30,6 +30,9 @@ $(document).ready(function() {
     g4val = gemGenerator();
     target = targetGenerator()
     $('#target').html(target);
+    $('#score').html(current);
+    $('#win').html(wins);
+    $('#lost').html(lost);
 
     // function to add click value to current
     $('#gem1').click(function(){
@@ -84,5 +87,4 @@ $(document).ready(function() {
         $('#target').html(target);
         $('#score').text(current);
     }
-
 });
