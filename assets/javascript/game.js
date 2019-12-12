@@ -1,5 +1,6 @@
 // waits for the doms to be created in order to reference them
 $(document).ready(function() {
+
     // declaring variables
     var target = 0;
     var current = 0;
@@ -65,13 +66,23 @@ $(document).ready(function() {
         // the reset function is called and the # of lost games is updated
         if (current > target){
             lost ++;
+            // gives user feedback to let them know if they won or lost
+            alert("You Lost \n Try again?");
+
             reset();
+
             $('#lost').text(lost);
+
         }else if (current === target){ 
             // if the current is equal to the target the player wins.
             // wins increments and the values are reset.
             wins ++;
+
+            // gives user feedback to let them know if they won or lost
+            alert("You Won \n Play again?");
+
             reset();
+
             $('#win').text(wins);
         }
     }
@@ -87,4 +98,5 @@ $(document).ready(function() {
         $('#target').html(target);
         $('#score').text(current);
     }
+
 });
